@@ -1,0 +1,7 @@
+.item-box {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #272727;
+    padding: 5px;
+    justify-content: center;
+}

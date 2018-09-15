@@ -1,0 +1,38 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+
+}
+
+header {
+    height: 100px;
+    background-color: #272727;
+}
+
+@media screen and  (max-width: 1255px) {
+    .item {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .item {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .item {
+        width: 100%;
+    }
+}

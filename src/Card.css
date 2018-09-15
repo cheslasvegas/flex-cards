@@ -1,0 +1,145 @@
+.item {
+    height: 250px;
+    position: relative;
+    width: 25%;
+    padding: 5px;
+    border: .5px solid gray;
+    transition: width;
+    transition-duration: 1s;
+    overflow: hidden;
+
+}
+
+.info-item {
+    position: absolute;
+    height: 300px;
+    background-color: darkgray;
+    /*width: calc(100% - 10px);*/
+    z-index: 3;
+    overflow-y: hidden;
+    display: none;
+}
+
+.item:hover {
+    color: #f56c08;
+    overflow: visible;
+
+}
+
+.item:hover .wrapper {
+    box-shadow: 2px 5px 14px 3px #f56c0899;
+    background-color: #272727;
+    z-index: 3;
+
+}
+
+.img-content {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.img-content:hover .description {
+    height: 50%;
+
+}
+
+.img-content:hover .rating {
+    left: -100px;
+
+}
+
+.img-content:hover .duration {
+    right: -100px;
+
+}
+
+.img-content > img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    position: absolute;
+    overflow: hidden;
+    height: 600px;
+}
+
+.wrapper.activated {
+    height: auto;
+
+}
+.wrapper.clicked {
+    background-color: red;
+}
+
+.rating, .duration {
+    position: absolute;
+    opacity: .5;
+    background-color: gray;
+    height: 20px;
+    border-radius: 3px;
+    color: lightgrey;
+
+}
+
+.rating {
+    left: 4px;
+    bottom: 8px;
+    padding: 0 3px;
+    transition: left;
+    transition-duration: 1s;
+
+}
+
+.rating.selected {
+    left: -100px;
+}
+
+.rating:after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(https://porno1.tv//images/ico-rating-positive.png) no-repeat 0 0;
+    background-size: 13px 13px;
+    margin-bottom: -1px;
+    margin-left: 3px;
+}
+
+.duration {
+    right: 4px;
+    bottom: 8px;
+    padding: 0 3px;
+    transition: right;
+    transition-duration: 1s;
+}
+
+.duration.selected {
+    right: -100px;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    /*opacity: .4;*/
+    /*background-color: #f56c08;*/
+    background-color: rgba(245, 108, 8, .1);
+    color: white;
+    overflow: hidden;
+    transition: height;
+    transition-duration: 1s;
+}
+
+/*.description.visible {*/
+/*height: 100%;*/
+/*}*/
+
+.text-content {
+    padding: 5px;
+    overflow: hidden;
+    color: inherit;
+}
