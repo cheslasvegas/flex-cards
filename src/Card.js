@@ -2,23 +2,18 @@ import React, {Component} from 'react';
 import './Card.css';
 
 class Card extends Component {
+    state = {
+        isClicked: false,
+        ratingCount: 0
+    };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            isClicked: false,
-            ratingCount: 0
-        };
-
-        this.imageClickHandler = () => {
-            this.setState(function (prevState, props) {
-                return {
-                    isClicked: !prevState.isClicked,
-                    ratingCount: prevState.ratingCount + props.step
-                }
-
-            });
-        }
+    imageClickHandler = () => {
+        this.setState(function (prevState, props) {
+            return {
+                isClicked: !prevState.isClicked,
+                ratingCount: prevState.ratingCount + props.step
+            }
+        });
     }
 
 
@@ -39,13 +34,10 @@ class Card extends Component {
                         <div className="duration">{this.props.duration}</div>
                     </div>
                     <div className="text-content">{this.props.textContent}</div>
-
                 </div>
             </div>
-
         );
     }
 }
-
 
 export default Card;

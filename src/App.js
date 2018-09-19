@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
     render() {
         return (
-            <CardContainer/>
+            <CardContainer data='../card-data.js'/>
         );
     }
 }

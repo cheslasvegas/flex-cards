@@ -7,7 +7,6 @@
     transition: width;
     transition-duration: 1s;
     overflow: hidden;
-
 }
 
 .info-item {
@@ -70,6 +69,7 @@
     height: auto;
 
 }
+
 .wrapper.clicked {
     background-color: red;
 }
@@ -124,7 +124,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 0%;
+    height: 0;
     /*opacity: .4;*/
     /*background-color: #f56c08;*/
     background-color: rgba(245, 108, 8, .1);
